@@ -7,10 +7,9 @@ def get_access_token():
     return 'YOUR_ACCESS_TOKEN'
 
 def search_profiles(first_name, last_name):
-    # Imaginary function since LinkedIn API does not support this directly
     access_token = get_access_token()
     headers = {'Authorization': f'Bearer {access_token}'}
-    search_url = f'https://api.linkedin.com/v2/people-search?first_name={first_name}&last_name={last_name}'  # Not a real endpoint
+    search_url = f'https://api.linkedin.com/v2/people-search?first_name={first_name}&last_name={last_name}'  
     response = requests.get(search_url, headers=headers)
     return response.json()
 
